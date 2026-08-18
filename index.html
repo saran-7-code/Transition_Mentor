@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US-India Relocation Strategy | Personal Insights</title>
+    
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-color: #1e3a8a; /* Deep Blue */
-            --secondary-color: #2563eb; /* Bright Blue */
-            --accent-color: #fbbf24; /* Amber */
-            --bg-color: #f8fafc;
-            --text-main: #1e293b;
+            --primary-dark: #0f172a;
+            --primary-main: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent-color: #fbbf24;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #334155;
+            --text-heading: #0f172a;
             --text-muted: #64748b;
         }
 
@@ -21,165 +30,264 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             color: var(--text-main);
-            background-color: #ffffff;
+            background-color: var(--bg-page);
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Header / Hero Section */
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-heading);
+        }
+
+        /* Hero Section - Premium Gradient */
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-main) 50%, var(--primary-light) 100%);
             color: white;
-            padding: 5rem 2rem;
+            padding: 7rem 2rem 6rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+') repeat;
+            opacity: 0.4;
+            pointer-events: none;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             max-width: 700px;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto 3rem auto;
             color: #e2e8f0;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-button {
             display: inline-block;
             background-color: white;
-            color: var(--primary-color);
-            padding: 1rem 2.5rem;
+            color: var(--primary-dark);
+            padding: 1.1rem 2.8rem;
             font-size: 1.15rem;
-            font-weight: bold;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
         }
 
         .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             background-color: #f1f5f9;
-            transform: translateY(-2px);
         }
 
-        /* Pricing Badge */
+        /* Glassmorphism Pricing Badge */
         .pricing-badge {
             background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
-            color: #e2e8f0;
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #f8fafc;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         .pricing-badge strong {
             color: var(--accent-color);
-            font-size: 1.1rem;
+            font-size: 1.3rem;
+            font-family: 'Outfit', sans-serif;
         }
 
         /* Main Container */
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: -3rem auto 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         /* About Section */
         .about-section {
-            margin-bottom: 4rem;
-            font-size: 1.1rem;
+            background: var(--bg-card);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            margin-bottom: 5rem;
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-main);
         }
 
         .about-section p {
             margin-bottom: 1.5rem;
         }
-
-        /* Topics Covered Grid */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .card {
-            background-color: var(--bg-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-top: 4px solid var(--secondary-color);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
+        
+        .about-section p:last-child {
+            margin-bottom: 0;
         }
 
         /* Session Focus Area */
         .session-focus {
-            background-color: var(--bg-color);
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
         }
 
-        .session-focus h2 {
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
         }
 
         .session-list {
             list-style-type: none;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
         }
 
         .session-list li {
             position: relative;
-            padding-left: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
+            padding-left: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .session-list li:last-child {
+            margin-bottom: 0;
         }
 
         .session-list li::before {
-            content: "→";
+            content: "✓";
             position: absolute;
             left: 0;
-            color: var(--secondary-color);
+            top: 2px;
+            background: var(--primary-light);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
             font-weight: bold;
+        }
+
+        .session-list strong {
+            color: var(--primary-dark);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Topics Covered Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-light);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            background: #f1f5f9;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
         }
 
         /* Footer & Disclaimer */
         footer {
             text-align: center;
-            padding: 3rem 2rem;
-            background-color: #f1f5f9;
-            border-top: 1px solid #e2e8f0;
+            padding: 4rem 2rem;
+            background-color: var(--primary-dark);
+            color: #94a3b8;
         }
 
         .disclaimer {
             max-width: 800px;
             margin: 0 auto;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-style: italic;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+        
+        .disclaimer strong {
+            color: #cbd5e1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .about-section {
+                padding: 2rem;
+            }
+            .session-list {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -189,13 +297,12 @@
         <h1>Navigating the US-India Journey</h1>
         <p>Real-world insights from someone who has lived the migration path—both ways.</p>
         
-        <!-- Mailto link with pre-filled subject and body parameters -->
         <a href="mailto:your-email@example.com?subject=Consultation%20Request%3A%20US-India%20Relocation&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20book%20a%201-on-1%20relocation%20strategy%20session.%20Here%20are%20my%20details%3A%0D%0A%0D%0A-%20Target%20Move%20Timeline%3A%20%5BEnter%20Month%2FYear%5D%0D%0A-%20Family%20Details%20%28Single%2FMarried%2FChildren%29%3A%20%5BEnter%20Details%5D%0D%0A-%20Preferred%20Time%20Slots%20%28Choose%203%20between%208%20PM%20-%2010%20PM%20PT%20or%207%20AM%20-%2010%20AM%20PT%29%3A%0D%0A%20%201.%20%5BDate%20%26%20Time%5D%0D%0A%20%202.%20%5BDate%20%26%20Time%5D%0D%0A%20%203.%20%5BDate%20%26%20Time%5D%0D%0A%0D%0A-%20Main%20Questions%2FTopics%3A%20%5BBriefly%20describe%5D%0D%0A%0D%0AI%20understand%20a%2030-minute%20session%20is%20%2450%20and%20will%20look%20out%20for%20the%20payment%20link.%0D%0A%0D%0AThanks%21" class="cta-button">Book a 1-on-1 Session</a>
         
         <br>
         <div class="pricing-badge">
             <strong>$50</strong> / 30-Minute Session<br>
-            <span style="font-size: 0.85rem; opacity: 0.9;">Secure payment link provided in response email</span>
+            <span style="font-size: 0.9rem; opacity: 0.9; font-family: 'Inter', sans-serif;">Secure payment link provided in response email</span>
         </div>
     </header>
 
@@ -207,38 +314,44 @@
         </section>
 
         <section class="session-focus">
-            <h2>What We Can Discuss</h2>
+            <h2 class="section-title">What We Can Discuss</h2>
             <ul class="session-list">
+                <li><strong>The Reality of the US Move:</strong> What to expect during your Master's, adjusting to the culture, and breaking into top-tier tech companies.</li>
                 <li><strong>The Return-to-India Checklist:</strong> The exact steps, timelines, and logistical boxes to check when wrapping up a decade abroad.</li>
                 <li><strong>Money & Lifestyle Logistics:</strong> Honest advice on moving funds, managing cross-border assets, avoiding real estate pitfalls, and finding the right schools.</li>
                 <li><strong>A Trusted Network:</strong> Direct introductions to peers and professionals who can help ease your transition on either side.</li>
-                <li><strong>The Reality of the US Move:</strong> What to expect during your Master's, adjusting to the culture, and breaking into top-tier tech companies.</li>
             </ul>
         </section>
 
         <h2 class="section-title">My Experiences Cover</h2>
         <div class="grid">
             <div class="card">
+                <div class="card-icon">📈</div>
                 <h3>Finance & Retirement</h3>
                 <p>Personal experiences managing cross-border investments, 401(k) and EPF logistics, transferring retirement funds, and handling dual-country tax planning.</p>
             </div>
             <div class="card">
+                <div class="card-icon">🏡</div>
                 <h3>Real Estate & Housing</h3>
                 <p>Insights into the home buying versus renting dilemma in both the US and India, including practical hurdles and paperwork.</p>
             </div>
             <div class="card">
+                <div class="card-icon">🎓</div>
                 <h3>Family & Education</h3>
                 <p>Navigating children's education, finding the right school systems, and understanding the adjustment period for kids moving across the globe.</p>
             </div>
             <div class="card">
+                <div class="card-icon">🛡️</div>
                 <h3>Safety & Lifestyle</h3>
                 <p>Candid discussions on cultural adjustments, general safety concerns, and specific insights into women's safety in both environments.</p>
             </div>
             <div class="card">
+                <div class="card-icon">✈️</div>
                 <h3>Logistics & Services</h3>
                 <p>The exact shipping, moving, and migration services I used, what worked, what failed, and how to pack your life up efficiently.</p>
             </div>
             <div class="card">
+                <div class="card-icon">⚠️</div>
                 <h3>The "Gotchas"</h3>
                 <p>Crucial things to take care of *before* leaving—from bank account closures to mail forwarding, credit history preservation, and hidden fees.</p>
             </div>
