@@ -8,6 +8,7 @@
         :root {
             --primary-color: #1e3a8a; /* Deep Blue */
             --secondary-color: #2563eb; /* Bright Blue */
+            --accent-color: #fbbf24; /* Amber */
             --bg-color: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #64748b;
@@ -51,17 +52,35 @@
             display: inline-block;
             background-color: white;
             color: var(--primary-color);
-            padding: 0.8rem 2rem;
-            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.15rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 8px;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button:hover {
             background-color: #f1f5f9;
             transform: translateY(-2px);
+        }
+
+        /* Pricing Badge */
+        .pricing-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .pricing-badge strong {
+            color: var(--accent-color);
+            font-size: 1.1rem;
         }
 
         /* Main Container */
@@ -169,7 +188,15 @@
     <header>
         <h1>Navigating the US-India Journey</h1>
         <p>Real-world insights from someone who has lived the migration path—both ways.</p>
-        <a href="mailto:vatindia7@gmail.com" class="cta-button">Book a 1-on-1 Session</a>
+        
+        <!-- Mailto link with pre-filled subject and body parameters -->
+        <a href="mailto:your-email@example.com?subject=Consultation%20Request%3A%20US-India%20Relocation&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20book%20a%201-on-1%20relocation%20strategy%20session.%20Here%20are%20my%20details%3A%0D%0A%0D%0A-%20Target%20Move%20Timeline%3A%20%5BEnter%20Month%2FYear%5D%0D%0A-%20Family%20Details%20%28Single%2FMarried%2FChildren%29%3A%20%5BEnter%20Details%5D%0D%0A-%20Preferred%20Time%20Slots%20%28Choose%203%20between%208%20PM%20-%2010%20PM%20PT%20or%207%20AM%20-%2010%20AM%20PT%29%3A%0D%0A%20%201.%20%5BDate%20%26%20Time%5D%0D%0A%20%202.%20%5BDate%20%26%20Time%5D%0D%0A%20%203.%20%5BDate%20%26%20Time%5D%0D%0A%0D%0A-%20Main%20Questions%2FTopics%3A%20%5BBriefly%20describe%5D%0D%0A%0D%0AI%20understand%20a%2030-minute%20session%20is%20%2450%20and%20will%20look%20out%20for%20the%20payment%20link.%0D%0A%0D%0AThanks%21" class="cta-button">Book a 1-on-1 Session</a>
+        
+        <br>
+        <div class="pricing-badge">
+            <strong>$50</strong> / 30-Minute Session<br>
+            <span style="font-size: 0.85rem; opacity: 0.9;">Secure payment link provided in response email</span>
+        </div>
     </header>
 
     <div class="container">
